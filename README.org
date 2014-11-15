@@ -1,0 +1,4 @@
+#+title: nixops-lab
+#+author: ardumont
+
+Learning by doing with nixops.
