@@ -5,7 +5,7 @@
     { config, pkgs, ... }:
     { services.httpd.enable = true;
       services.httpd.adminAddr = "admin@somewhere.org";
-      services.httpd.documentRoot = "${pkgs.valgrind}/share/doc/valgrind/html";
+      services.httpd.documentRoot = "/www";
       networking.firewall.allowedTCPPorts = [ 80 ];
     };
 }
