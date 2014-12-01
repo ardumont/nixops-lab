@@ -10,9 +10,9 @@
         };
       };
       # mount share folder on vbox
-      # boot.initrd.extraUtilsCommands = ''
-      #   mkdir -p /www
-      #   mount -t vboxsf www /www
-      # '';
+      system.activationScripts.media = ''
+        mkdir -m 0755 -p /www
+        mount -t vboxsf www /www
+      '';
     };
 }
