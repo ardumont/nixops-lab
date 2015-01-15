@@ -21,3 +21,27 @@ destroy-trivial:
 
 list:
 	nixops list
+
+build-tomcat:
+	cd tomcat && nixops create ./tomcat.nix ./tomcat-vbox.nix -d tomcat
+
+info-tomcat:
+	nixops info -d tomcat
+
+deploy-tomcat:
+	nixops deploy -d tomcat
+
+ssh-tomcat:
+	nixops ssh -d tomcat webserver
+
+stop-tomcat:
+	nixops stop -d tomcat
+
+start-tomcat:
+	nixops start -d tomcat
+
+destroy-tomcat:
+	nixops destroy -d tomcat
+
+# %.o:
+# 	echo $@
